@@ -1,0 +1,7 @@
+﻿➤ RDS - Primary DB with Replication
+➤ Auto Scaling Group and Launch Config
+➤ Load Balancers for Web Server
+➤ EC2 Instance for WebServer
+➤ Security Group for Each Resource
+➤ VPC for our RDS and WebServers
+➤ NAT Gateway and Internet Gatewa
