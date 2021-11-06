@@ -1,41 +1,23 @@
-variable "AWS_REGION" {
-    type        = string
-    default     = "us-east-2"
-}
-
-variable "LEVELUP_VPC_CIDR_BLOC" {
-  description = "The CIDR block for the VPC"
-  type        = string
-  default     = "10.0.0.0/16"
-}
-
-variable "LEVELUP_VPC_PUBLIC_SUBNET1_CIDR_BLOCK" {
-  description = "The CIDR block for the VPC"
-  type        = string
-  default     = "10.0.101.0/24"
-}
-
-variable "LEVELUP_VPC_PUBLIC_SUBNET2_CIDR_BLOCK" {
-  description = "The CIDR block for the VPC"
-  type        = string
-  default     = "10.0.102.0/24"
-}
-
-variable "LEVELUP_VPC_PRIVATE_SUBNET1_CIDR_BLOCK" {
-  description = "The CIDR block for the VPC"
-  type        = string
-  default     = "10.0.1.0/24"
-}
-
-variable "LEVELUP_VPC_PRIVATE_SUBNET2_CIDR_BLOCK" {
-  description = "The CIDR block for the VPC"
-  type        = string
-  default     = "10.0.2.0/24"
-}
 
 variable "ENVIRONMENT" {
-  description = "AWS VPC Environment Name"
-  type        = string
-  default     = "Development"
+    type    = string
+    default = "development"
 }
 
+variable "AMIS" {
+    type = map
+    default = {
+        us-east-1 = "ami-0f40c8f97004632f9"
+        us-east-2 = "ami-05692172625678b4e"
+        us-west-2 = "ami-02c8896b265d8c480"
+        eu-west-1 = "ami-0cdd3aca00188622e"
+    }
+}
+
+variable "AWS_REGION" {
+default = "us-east-2"
+}
+
+variable "INSTANCE_TYPE" {
+  default = "t2.micro"
+}
